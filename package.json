@@ -15,6 +15,6 @@
     "simple-line-icons": "^2.3.2",
     "socket.io": "^4.4.1",
     "socket.io-client": "^4.4.1",
-    "socket.io-v3": "npm:socket.io@^3.1.2",
+    "socket.io-v3": "npm:socket.io@^3.1.2"
   }
 }
