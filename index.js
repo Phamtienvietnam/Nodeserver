@@ -3,7 +3,7 @@ const { Server } = require("socket.io");
 const { instrument } = require("@socket.io/admin-ui");
 const express = require('express');
 const INDEX = '/index.html';
-
+const PORT = process.env.PORT || 443;
 const server = express()
   .use((req, res) => res.sendFile(INDEX, { root: __dirname }))
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
