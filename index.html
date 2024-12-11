@@ -9,26 +9,22 @@
       #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
       #input:focus { outline: none; }
       #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
-
+      #thongbao { list-style-type: none; margin: 0; padding: 0; }
+      #thongbao > li { padding: 0.5rem 1rem; }
+      #thongbao > li:nth-child(odd) { background: #4BC558; }
       #messages { list-style-type: none; margin: 0; padding: 0; }
       #messages > li { padding: 0.5rem 1rem; }
       #messages > li:nth-child(odd) { background: #efefef; }
     </style>
   </head>
   <body>
+    <ul id="thongbao"></ul>
     <ul id="messages"></ul>
     <form id="form" action="">
       <input id="input" autocomplete="off" /><button>Send</button>
     </form>
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-// Create element:
-const para = document.createElement("p");
-para.innerText = "This is a paragdraph.";
 
-// Append to body:
-document.body.appendChild(para);
-</script>
     <script>
       var socket = io();
 
@@ -51,5 +47,6 @@ document.body.appendChild(para);
         window.scrollTo(0, document.body.scrollHeight);
       });
     </script>
+    
   </body>
 </html>
