@@ -21,7 +21,14 @@
       <input id="input" autocomplete="off" /><button>Send</button>
     </form>
     <script src="/socket.io/socket.io.js"></script>
+    <script>
+// Create element:
+const para = document.createElement("p");
+para.innerText = "This is a paragdraph.";
 
+// Append to body:
+document.body.appendChild(para);
+</script>
     <script>
       var socket = io();
 
