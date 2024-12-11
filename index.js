@@ -19,6 +19,6 @@ io.on('connection', (socket) => {
 	 io.emit('message', msg);
   });
   console.log(socket.rooms)	
-io.on('disconnect', () => console.log('Client disconnected - Online Còn lại '+io.sockets.server.engine.clientsCount));  
+socket.on('disconnect', () => console.log('Client disconnected - Online Còn lại '+io.sockets.server.engine.clientsCount));  
 });
 
