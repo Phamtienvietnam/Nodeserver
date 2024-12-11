@@ -10,7 +10,7 @@ const server = express()
 const io = socketIO(server);
 
 io.on('connection', (socket) => {
-	  console.log('ID KET NOI '+io.sockets.id);
+	  console.log('ID KET NOI '+io.sockets.server.engine.clients.ID);
 	  console.log('Client connected - Tổng số Online => '+io.sockets.server.engine.clientsCount);
 	  console.log(io.sockets.server.engine.clientsCount);
   socket.on('chat message', msg => {
