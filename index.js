@@ -14,6 +14,18 @@ io.on('connection', (socket) => {
 	  console.log('Client connected - Tổng số Online => '+io.sockets.server.engine.clientsCount);
 	  console.log(io.sockets.server.engine.clientsCount);
   socket.on('chat message', msg => {
+	  const myArray = data.split("*");
+  		switch (myArray[0]) {
+    		case "TOTAL":
+      		io.emit('chat message', 'Tổng số Online => '+io.sockets.server.engine.clientsCount);
+      		break;
+
+    		case "Papayas":
+      		console.log("Mangoes and papayas are $2.79 a pound.");
+     		 // Expected output: "Mangoes and papayas are $2.79 a pound."
+      		break;
+    		default:
+ 	 }  
     io.emit('chat message', msg);
 	 console.log (msg);
 	 io.emit('message', msg);
