@@ -11,6 +11,9 @@ const io = socketIO(server);
 
 io.on('connection', (socket) => {
 	  console.log('ID KET NOI '+socket.id);
+	  const ipAddress = socket.handshake.address;
+
+ 	 console.log(ipAddress)
 	  console.log('Client connected - Tổng số Online => '+io.sockets.server.engine.clientsCount);
 	  console.log(io.sockets.server.engine.clientsCount);
   socket.on('chat message', msg => {
