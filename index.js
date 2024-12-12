@@ -14,7 +14,7 @@ io.on('connection', (socket) => {
 	  console.log('Client connected - Tổng số Online => '+io.sockets.server.engine.clientsCount);
 	  console.log(io.sockets.server.engine.clientsCount);
   socket.on('chat message', msg => {
-	  const myArray = data.split("*");
+	  const myArray = msg.split("*");
   		switch (myArray[0]) {
     		case "TOTAL":
       		io.emit('chat message', 'Tổng số Online => '+io.sockets.server.engine.clientsCount);
